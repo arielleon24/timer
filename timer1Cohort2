@@ -1,0 +1,14 @@
+const beepTimes = process.argv.slice(2);
+console.log(beepTimes);
+
+const alarm = (beepDelays) => {
+  for (let delays of beepDelays) {
+    if (!isNaN(delays) && delays > 0 && (delays)) {
+      setTimeout(() => {
+        process.stdout.write("BEEP \n");
+      }, delays * 100);
+    }
+  }
+};
+
+alarm(beepTimes);
